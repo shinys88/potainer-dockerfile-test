@@ -16,12 +16,11 @@ services:
       - "43259:8000"
         #user: iwaz
     restart: always
-
-    #networks:
-      #- krict
+    networks:
+      - krict
 
 # 초기 설정시 : 호스트 서버에서 network 추가  =>  sudo docker network create krict
-#networks:
-  #krict:
-    #external:
-      #name: krict
+networks:
+  krict:
+    external:
+      name: krict
