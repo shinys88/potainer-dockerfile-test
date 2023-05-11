@@ -1,11 +1,6 @@
 FROM ubuntu:20.04
-#EXPOSE 8000/tcp
-
-
-
+EXPOSE 8000/tcp
 #USER iwaz
-
-
 # ENTRYPOINT ["docker-entrypoint.sh"]
-# CMD ["postgres"]
+CMD ["bash"]
 
