@@ -3,7 +3,7 @@ version: "3.1"
 services:
   krict_test:
     build:
-      context: /mnt/hdd1/krict/dockerfile
+      context: .
       dockerfile: df_krict
       #pull_policy: build
     container_name: krict_test
