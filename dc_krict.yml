@@ -1,0 +1,27 @@
+version: "3.1"
+
+services:
+  krict_test:
+    build:
+      context: /mnt/hdd1/krict/dockerfile
+      dockerfile: df_krict
+      #pull_policy: build
+    container_name: krict_test
+    volumes:
+      # 프로젝트 디렉토리 마운트
+      - /mnt/hdd1/krict/web/deploy:/krict
+      # .static_root => nginx에 설정하기 위함.
+      - /mnt/hdd1/gluster/mount_point/vol1/krict_static/.static_root:/krict/.static_root
+    ports:
+      - "43259:8000"
+        #user: iwaz
+    restart: always
+
+    #networks:
+      #- krict
+
+# 초기 설정시 : 호스트 서버에서 network 추가  =>  sudo docker network create krict
+#networks:
+  #krict:
+    #external:
+      #name: krict
