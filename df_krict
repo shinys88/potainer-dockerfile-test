@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 EXPOSE 8000/tcp
+EXPOSE 9000/tcp
 #USER iwaz
 ENTRYPOINT ["bash"]
 CMD ["tail", "-f", "/dev/null"]
