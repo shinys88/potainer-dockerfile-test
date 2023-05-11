@@ -2,5 +2,5 @@ FROM ubuntu:20.04
 EXPOSE 8000/tcp
 #USER iwaz
 # ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["tail -f /dev/null"]
+CMD ["tail", "-f", "/dev/null"]
 
